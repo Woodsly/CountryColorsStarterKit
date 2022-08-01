@@ -1,8 +1,9 @@
 class Country {
-    constructor(name, lang, greeting, colors) {
+    constructor(name, lang, greeting, colors, flag) {
         this.name = name;
         this.lang = lang;
         this.greeting = greeting;
+        this.flag = flag;
         this.colors = colors;
     }
     ChangeColor(){
@@ -12,13 +13,14 @@ class Country {
         document.querySelector("#CountryName").innerText = `${this.name}`;
         document.querySelector("#OfficialLanguage").innerText = `${this.lang}`;
         document.querySelector("#HelloWorld").innerText = `${this.greeting}`;
+        document.querySelector("#flag").src = `${this.flag}`;
     }
 }
-let usa = new Country("USA", "Murican", "Why Hello there world! Have some McDonalds", ["red", "white", "blue"]);
-let mexico = new Country("Mexico", "Spanish", "Hola mundo!", ["red", "white", "green"]);
-let algeria = new Country("Algeria", "Arabic and Berber", "Sup", ["blue", "yellow", "red"])
-let germany = new Country("Germany", "German", "Hallo Welt", ["black", "red", "yellow"])
-let egypt = new Country("Egypt", "Arabic", "مرحبا بالعالم", ["red", "black", "white"]);
+let usa = new Country("USA", "Murican", "Why Hello there world! Have some McDonalds", ["red", "white", "blue"], "usa.jpg");
+let mexico = new Country("Mexico", "Spanish", "Hola mundo!", ["red", "white", "green"], "mexico.jpg");
+let algeria = new Country("Algeria", "Arabic and Berber", "Sup", ["green", "red", "white"], "algeria.png")
+let germany = new Country("Germany", "German", "Hallo Welt", ["black", "red", "yellow"], "germany.png")
+let egypt = new Country("Egypt", "Arabic", "مرحبا بالعالم", ["red", "black", "white"], "egypt.png");
 
 
 function SwitchCountry() {
